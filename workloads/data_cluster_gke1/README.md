@@ -1,6 +1,26 @@
-# GKE Sandbox - Daily Ephemeral Cluster
+# Data Cluster GKE1
 
-High-performance GKE cluster (16 vCPU, 64GB RAM) for daily development sessions.
+High-performance ephemeral GKE cluster for daily sandbox use.
+
+## Quick Start
+
+### Daily Workflow
+
+**Start your day:**
+```bash
+cd /home/rami/Work/google/workloads/data_cluster_gke1
+scripts/start.sh
+```
+
+**Port-forward services:**
+```bash
+scripts/connect.sh
+```
+
+**End your day:**
+```bash
+scripts/stop.sh
+```
 
 ## Prerequisites
 1. **Project**: `data-cluster-gke1` (created manually)
@@ -8,9 +28,6 @@ High-performance GKE cluster (16 vCPU, 64GB RAM) for daily development sessions.
 3. **Terraform**: Installed
 4. **gcloud CLI**: Installed
 
-## Daily Workflow
-
-### Morning: Start Cluster
 ```bash
 scripts/start.sh
 ```

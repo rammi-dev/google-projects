@@ -12,8 +12,8 @@ CREDENTIALS_PATH="/home/rami/Work/secrets/data-cluster-gke1-7bad8b712669.json"
 # Export credentials
 export GOOGLE_APPLICATION_CREDENTIALS="$CREDENTIALS_PATH"
 
-# Navigate to workload directory
-cd "$(dirname "$0")/../workloads/data_cluster_gke1"
+# Navigate to workload directory (parent of scripts/)
+cd "$(dirname "$0")/.."
 
 echo "📋 Running terraform plan..."
 terraform plan

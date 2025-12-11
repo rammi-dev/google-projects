@@ -1,11 +1,18 @@
-# GCP Workloads
+# GCP GKE Workloads
 
-This repository contains Terraform configurations for deploying workloads to manually created GCP projects.
+This repository contains GKE workload configurations for different environments.
 
 ## Structure
 
-### `workloads/` - Application Deployments
-Deploy actual applications (GKE clusters, VMs, etc.) into your manually created projects.
+```
+workloads/
+└── data_cluster_gke1/     # Data platform GKE cluster
+    ├── scripts/           # Deployment scripts for this workload
+    ├── *.tf              # Terraform configuration
+    └── README.md         # Workload-specific documentation
+```
+
+Each workload is self-contained with its own scripts and configuration.
 
 **Current Workloads:**
 - `data_cluster_gke1/` - High-performance ephemeral GKE cluster for daily sandbox use
