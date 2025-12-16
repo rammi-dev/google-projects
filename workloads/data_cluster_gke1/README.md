@@ -65,7 +65,7 @@ terraform apply
 
 # Connect kubectl
 gcloud container clusters get-credentials data-cluster-gke1 \
-  --region europe-central2 \
+  --zone europe-central2-b \
   --project data-cluster-gke1
 
 # Stop
