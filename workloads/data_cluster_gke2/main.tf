@@ -1,6 +1,6 @@
 resource "google_container_cluster" "primary" {
   name     = "data-cluster-gke1"
-  location = "europe-central2-b"  # Specific zone with unlimited SSD quota
+  location = var.location
   project  = var.project_id
 
   # We can't create a cluster with no node pool defined, but we want to only use
@@ -20,11 +20,11 @@ resource "google_container_cluster" "primary" {
 
 resource "google_container_node_pool" "primary_nodes" {
   name       = "primary-node-pool"
-  location   = "europe-central2-b"  # Same zone as cluster
+  location   = var.location  # Same zone as cluster
   cluster    = google_container_cluster.primary.name
   project    = var.project_id
   
-  node_count = 1
+  node_count = 2
 
   node_config {
     preemptible  = true

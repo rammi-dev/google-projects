@@ -14,3 +14,9 @@ variable "machine_type" {
   type        = string
   default     = "e2-standard-8"  # 4 vCPU, 16GB RAM
 }
+
+variable "location" {
+  description = "Location for the cluster."
+  type        = string
+  default     = "us-central1-a"  # Iowa
+}
