@@ -30,6 +30,29 @@ scripts/start.sh
 scripts/status.sh
 ```
 
+### Check Terraform state and drift
+```bash
+# Check current state and detect drift
+scripts/check-state.sh
+
+# Or use Terraform directly
+terraform state list              # List all managed resources
+terraform plan                    # Detect configuration drift
+terraform show                    # View current state
+```
+
+### Reconcile Terraform state
+```bash
+# Plan mode (default) - show what would change
+scripts/reconcile.sh plan
+
+# Refresh mode - update state to match actual infrastructure
+scripts/reconcile.sh refresh
+
+# Apply mode - update infrastructure to match configuration
+scripts/reconcile.sh apply
+```
+
 ### Connect to services
 ```bash
 scripts/connect.sh [SERVICE]

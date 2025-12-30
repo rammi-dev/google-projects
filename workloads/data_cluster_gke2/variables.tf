@@ -6,13 +6,13 @@ variable "project_id" {
 variable "region" {
   description = "The region for the cluster."
   type        = string
-  default     = "europe-central2"  # Warsaw
+  default     = "us-central1"  # Iowa
 }
 
 variable "machine_type" {
   description = "The machine type for the GKE node pool."
   type        = string
-  default     = "e2-standard-8"  # 4 vCPU, 16GB RAM
+  default     = "e2-standard-4"  # 4 vCPU, 16GB RAM
 }
 
 variable "location" {
