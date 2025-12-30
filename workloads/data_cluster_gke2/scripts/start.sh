@@ -5,8 +5,8 @@ echo "🚀 Starting GKE Cluster Deployment..."
 
 # Configuration
 PROJECT_ID="data-cluster-gke1"
-CLUSTER_NAME="data-cluster-gke2"
-ZONE="europe-central2-b"  # Using zone with unlimited SSD quota
+CLUSTER_NAME="data-cluster-gke1"
+ZONE="us-central1-a"
 CREDENTIALS_PATH="/home/rami/Work/secrets/data-cluster-gke1-7bad8b712669.json"
 
 # Export credentials
