@@ -1,13 +1,13 @@
-# Data Cluster GKE2
+# Data Cluster GKE1
 
 This project deploys a 2-node GKE cluster on Google Cloud Platform.
 
 ## Configuration
 
-- **Cluster Name**: data-cluster-gke2
-- **Location**: europe-central2-b (Warsaw)
+- **Cluster Name**: data-cluster-gke1
+- **Location**: us-central1-a (Iowa)
 - **Node Count**: 2 nodes
-- **Machine Type**: e2-standard-8 (8 vCPU, 32GB RAM per node)
+- **Machine Type**: e2-standard-4 (4 vCPU, 16GB RAM per node)
 - **Disk**: 100GB Standard Persistent Disk per node
 - **Preemptible**: Yes (cost savings)
 
@@ -15,7 +15,7 @@ This project deploys a 2-node GKE cluster on Google Cloud Platform.
 
 1. Google Cloud CLI (`gcloud`) installed
 2. Terraform installed
-3. Service account credentials file at `/home/rami/Work/secrets/data-cluster-gke2-credentials.json`
+3. Service account credentials file at `/home/rami/Work/secrets/data-cluster-gke1-7bad8b712669.json`
 
 ## Usage
 
@@ -65,8 +65,8 @@ scripts/stop.sh
 
 ## Cost Estimate
 
-- **2x e2-standard-8 preemptible nodes**
-- **Approximate cost**: ~$0.16/hour (~$1.28/day for 8 hours)
+- **2x e2-standard-4 preemptible nodes**
+- **Approximate cost**: ~$0.08/hour (preemptible pricing)
 
 ## Notes
 
